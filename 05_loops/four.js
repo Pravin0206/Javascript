@@ -1,4 +1,4 @@
-// For-in lopp for objects
+// For-in loop for objects
 
 // const myObj = {
 
