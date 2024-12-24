@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+
+        function addLanguage(langname){
+            const li = document.createElement('li')
+            li.innerHTML = `${langname}`
+            document.querySelector('.language').appendChild(li)
+            
+        }
+
+        addLanguage('Python')
+        addLanguage('Java')
+
+        // Optimise way
+
+        function addLanguageOpti(langname){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langname))
+            document.querySelector('.language').appendChild(li)
+
+        }
+
+        addLanguageOpti('Spring Boot')
+
+
+        //Edit element
+
+        const secLang = document.querySelector("li:nth-child(2)")
+        // console.log(secLang);
+        // secLang.innerHTML = "HTML"
+
+        // Another way to create new element and then replace
+
+        const newEle = document.createElement('li')
+        newEle.textContent = "HTML"
+        secLang.replaceWith(newEle)
+
+        // Using OuterHTML
+
+        const firstLang = document.querySelector('li:nth-child(1)')
+        firstLang.outerHTML = ('<li>CSS</li>')
+
+        // Remove element
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
+        
+    </script>
+</body>
+</html>
